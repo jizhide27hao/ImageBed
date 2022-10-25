@@ -1,0 +1,51 @@
+菜单路由权限封装、axios封装、权限管理、
+两个接口返回数据组成一个list（第一个接口返回500条、第二个返回800条，有个id可以匹配数据，最终要组成一个500条数据的list）
+minxin混入的使用 什么情况会用到  用在哪些地方
+
+vue2和vue3的几个区别
+vue2和vue3数据双向绑定的区别  vue3 用proxy的优势？
+
+token鉴权怎么做
+如何加快页面首屏加载时间
+async await
+
+
+mysql 8.0.25
+
+
+
+#!/bin/sh
+buildbranch=${branch}
+value=prod
+
+echo $value
+echo '23333'
+echo $buildbranch
+node -v
+
+npm config set registry http://nexus.simulate.com:8081/repository/npm-group/
+echo 'nnnnpppppmmm'
+npm get registry
+
+npm install
+
+echo 'build start'
+npm run build:stage || exit 1
+
+echo 'build finish'
+
+
+
+
+if docker ps -a|grep -i qhljrent-main-entry;then
+   docker rm -f qhljrent-main-entry
+fi
+
+if docker images -a|grep -i qhljrent-main-entry;then
+   docker rmi --force $(docker images | grep qhljrent-main-entry | awk '{print $3}')
+fi
+
+docker build -t qh-ljrent/qhljrent-main-entry:${buildbranch} .
+
+docker tag qh-ljrent/qhljrent-main-entry:${buildbranch} reg.hdec.com/qh-ljrent/qhljrent-main-entry:${buildbranch}
+docker push reg.hdec.com/qh-ljrent/qhljrent-main-entry:${buildbranch}
