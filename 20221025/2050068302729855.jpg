@@ -1,0 +1,44 @@
+云服务器ECS
+
+阿里云服务器实例密码 ： root
+kai+1316845179
+
+阿里云ip：106.14.137.32
+远程连接密码：630023
+
+
+华为云ip：119.3.185.223
+
+
+Windows远程连接：
+  win + R，		mstsc
+
+
+
+宝塔地址：http://119.3.185.223:8888/c71069c6/
+账户：jizhi
+密码：kai+1316845179
+
+windows服务器的宝塔：http://47.98.55.152:8888/mH9S9hPt
+账户：jizhi
+密码：a123456
+
+
+
+将node项目置于后台运行：node app.js &
+关闭后台服务：kill pid
+获取后台运行服务的列表： netstat -nultp
+
+
+
+mongodb：
+远程连接Linux的mongo需要提取做的事情：					// 参考的地址：https://www.cnblogs.com/soleds/p/12001992.html
+	阿里云放开 27017 端口
+	配置文件的bind_ip改为0.0.0.0
+	// 使用下面命令开放27017端口
+	[root@localhost /]# firewall-cmd --zone=public --add-port=27017/tcp --permanent	 // 返回  success
+	//重新加载防火墙
+	[root@localhost /]# firewall-cmd --reload
+	//查看端口是否开放
+	[root@localhost /]# firewall-cmd --query-port=27017/tcp                    	// 返回yes就可以连接了
+	重启mongodb服务
