@@ -1,0 +1,15 @@
+创建用户 ：useradd -g www xjk1  // www是组名，xjk1是用户名
+
+修改用户密码：https://blog.csdn.net/hyfstyle/article/details/90904992?utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.baidujs&dist_request_id=&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.baidujs
+
+[root@localhost ~]# passwd hadoop  ##修改hadoop用户密码
+Changing password for user hadoop.
+New password:  ##输入新密码
+Retype new password:  ##再次确认新密码
+passwd: all authentication tokens updated successfully.
+
+
+
+
+查看所有进程：ps fx
+查看进程名：ps -ef | grep 进程名
